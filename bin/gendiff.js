@@ -8,5 +8,6 @@ program
   .version('0.1', '-v, --vers', 'output the current version')
   .description('Compares two configuration files and shows a difference.')
   .option('-f, --format [type] ', 'output format')
+  .arguments('<filepath1>  <filepath2>')
 
 program.parse();
