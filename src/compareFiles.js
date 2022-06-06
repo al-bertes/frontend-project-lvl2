@@ -1,6 +1,5 @@
 import _ from 'lodash';
-
-const generateTab = (countSpace) => '  '.repeat(countSpace);
+import { generateTab } from './utils.js';
 
 const getString = (value, countSpace) => {
 
@@ -15,7 +14,7 @@ const getString = (value, countSpace) => {
   return `{\n${string.join('\n')}\n${generateTab(countSpace + 1)}}`;
 };
 
-const stylish = (dates) => {
+const compareFiles = (dates) => {
 
   const iter = (nodes, depth = 1) => {
     const string = nodes.map((node) => {
@@ -35,4 +34,4 @@ const stylish = (dates) => {
   return iter(dates);
 };
 
-export default stylish;
+export default compareFiles;
